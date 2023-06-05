@@ -1,11 +1,11 @@
-package com.crm.qa.pages;
+package com.aoc.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.crm.qa.base.TestBase;
+import com.aoc.base.TestBase;
 
 public class LoginPage extends TestBase {
 
@@ -36,17 +36,17 @@ public class LoginPage extends TestBase {
     }
 
     public boolean validateImage() {
-        return crmLogo.isDisplayed();
+        return logo.isDisplayed();
     }
 
-    public HomePage login(String un, String pwd) {
+    public void login(String un, String pwd) {
         username.sendKeys(un);
         password.sendKeys(pwd);
         //loginBtn.click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", loginBtn);
 
-        return new HomePage();
+
     }
 
 }

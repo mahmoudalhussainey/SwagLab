@@ -1,4 +1,4 @@
-package com.crm.qa.base;
+package com.aoc.base;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,6 +15,8 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListener;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
@@ -38,7 +40,7 @@ public class TestBase {
     @BeforeSuite
     public void setUp() {
         initialization();
-        loginPage = new LoginPage();
+
     }
 
 
