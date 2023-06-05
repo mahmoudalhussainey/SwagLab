@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>FreeCRMTestAutomation</groupId>
-    <artifactId>FreeCRMTest</artifactId>
+    <groupId>aoc-web-automation</groupId>
+    <artifactId>aoc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.16-beta2</version>
+            <version>3.9.2</version>
         </dependency>
 
 
