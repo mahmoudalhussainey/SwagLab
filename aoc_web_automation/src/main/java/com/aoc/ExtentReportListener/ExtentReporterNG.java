@@ -2,7 +2,7 @@
  * @autor : Naveen Khunteta
  *
  */
-package com.qa.ExtentReportListener;
+package com.aoc.ExtentReportListener;
 
 import java.io.File;
 import java.util.Calendar;

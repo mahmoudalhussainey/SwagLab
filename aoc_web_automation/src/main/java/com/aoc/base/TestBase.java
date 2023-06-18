@@ -13,8 +13,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-import com.crm.qa.util.TestUtil;
-import com.crm.qa.util.WebEventListener;
+import com.aoc.util.TestUtil;
+import com.aoc.util.WebEventListener;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -28,7 +28,7 @@ public class TestBase {
     public TestBase() {
         try {
             prop = new Properties();
-            FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "aoc_web_automation/src/main/java/com/aoc/config/config.properties");
+            FileInputStream ip = new FileInputStream("C:\\Users\\User\\Desktop\\Rasha\\Automation\\aoc_web_automation\\src\\main\\java\\com\\aoc\\config\\config.properties");
             prop.load(ip);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class TestBase {
         String browserName = prop.getProperty("browser");
 
         if (browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Downloads\\chromedriver_win32\\chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browserName.equals("FF")) {
             System.setProperty("webdriver.gecko.driver", "");
@@ -74,8 +74,8 @@ public class TestBase {
 
     @AfterSuite
     public void tearDown() {
-        driver.quit();
-    }
+//        driver.quit();
+    } 
 
 
 }

@@ -10,20 +10,20 @@ import com.aoc.base.TestBase;
 public class LoginPage extends TestBase {
 
     //Page Factory :
-    @FindBy(name = "username")
+    @FindBy(xpath = "//*[@id=\"user-name\"]")
     WebElement username;
 
-    @FindBy(name = "password")
+    @FindBy(xpath = "//*[@id=\"password\"]")
     WebElement password;
 
-    @FindBy(xpath = "//input[@type='submit']")
+    @FindBy(xpath = "//*[@id=\"login-button\"]")
     WebElement loginBtn;
 
-    @FindBy(xpath = "//button[contains(text(),'Sign Up')]")
-    WebElement signUpBtn;
-
-    @FindBy(xpath = "//img[contains(@class,'img-responsive')]")
-    WebElement logo;
+//    @FindBy(xpath = "//button[contains(text(),'Sign Up')]")
+//    WebElement signUpBtn;
+//
+//    @FindBy(xpath = "//img[contains(@class,'img-responsive')]")
+//    WebElement logo;
 
     //Initializing the Page Objects:
     public LoginPage() {
@@ -31,22 +31,23 @@ public class LoginPage extends TestBase {
     }
 
     //Actions:
-    public String validateLoginPageTitle() {
-        return driver.getTitle();
-    }
+//    public String validateLoginPageTitle() {
+//        return driver.getTitle();
+//    }
 
-    public boolean validateImage() {
-        return logo.isDisplayed();
-    }
+//    public boolean validateImage() {
+//        return logo.isDisplayed();
+//    }
 
     public void login(String un, String pwd) {
         username.sendKeys(un);
         password.sendKeys(pwd);
-        //loginBtn.click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", loginBtn);
+        loginBtn.click();
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].click();", loginBtn);
 
 
     }
 
 }
+
